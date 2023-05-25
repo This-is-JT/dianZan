@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #f1f1f1;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 250px auto;
+      }
+      div p {
+        font-size: 50px;
+        font-weight: 800;
+      }
+
+      button {
+        margin-top: 30px;
+        outline: none;
+        border: none;
+        background-color: #21209c;
+        color: #f1f1f1;
+        border-radius: 50px;
+        padding: 10px;
+        width: 250px;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>👍🏿 <span id="num">0</span></p>
+      <button id="btn" onclick="like()">Like</button>
+    </div>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let num = document.getElementById("num");
+
+      function like() {
+        console.log("clicked");
+        let res = parseInt(num.innerText) + 1;
+        num.innerText = res;
+      }
+    </script>
+  </body>
+</html>
